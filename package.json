@@ -1,0 +1,12 @@
+{
+  "name": "serverless_app",
+  "main": "handler.js",
+  "dependencies": {
+    "dotenv": "5.0.1",
+    "graphql": "0.13.2",
+    "pg": "6.1.2"
+  },
+  "devDependencies": {
+    "aws-lambda-local": "1.0.15"
+  }
+}

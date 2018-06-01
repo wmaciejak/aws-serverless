@@ -1,0 +1,15 @@
+service: test-serverless-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  query:
+    handler: handler.graphql_query
+    events:
+      - http:
+          path: query
+          method: get

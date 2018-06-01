@@ -1,0 +1,5 @@
+{
+  "queryStringParameters": {
+    "query": "{postsFromPg{ id title }}"
+  }
+}
