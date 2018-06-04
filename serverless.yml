@@ -7,9 +7,25 @@ provider:
   region: us-east-1
 
 functions:
-  query:
-    handler: handler.graphql_query
+  graphql:
+    handler: handler.graphql
     events:
       - http:
-          path: query
+          path: graphql
           method: get
+
+  rest_mocked_posts:
+    handler: handler.rest_mocked_posts
+    events:
+     - http:
+         path: mocked_posts
+         method: get
+         cors: true
+
+  rest_pg_posts:
+    handler: handler.rest_pg_posts
+    events:
+     - http:
+         path: posts
+         method: get
+         cors: true
